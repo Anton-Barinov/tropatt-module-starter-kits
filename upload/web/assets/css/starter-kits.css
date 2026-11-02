@@ -1,0 +1,71 @@
+.skits-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 1fr);
+  gap: 1.25rem;
+}
+.skits-hero {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--crm-surface, #ffffff);
+  border: 1px solid var(--crm-border, #e2e8f0);
+  border-radius: var(--crm-radius, 12px);
+}
+.skits-hero-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--crm-primary, #3b82f6) 12%, transparent);
+  color: var(--crm-primary, #3b82f6);
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+.skits-panel {
+  min-height: 200px;
+  background: var(--crm-surface, #ffffff);
+  border: 1px solid var(--crm-border, #e2e8f0);
+  border-radius: var(--crm-radius, 12px);
+}
+.skits-status-box {
+  background: var(--crm-surface-variant, #f8fafc);
+  border: 1px solid var(--crm-border, #e2e8f0);
+}
+.crm-starter-kits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 1rem;
+}
+.crm-starter-kit-card {
+  min-width: 0;
+  height: 100%;
+}
+.crm-starter-kit-card .crm-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+.crm-starter-kit-card ul {
+  padding-inline-start: 1.25rem;
+}
+.crm-starter-kit-card button {
+  margin-top: auto;
+}
+#skitsComponentChoices .form-check {
+  padding-inline-start: 1.75rem;
+}
+#skitsPreviewPanel {
+  scroll-margin-top: 1rem;
+}
+@media (max-width: 991px) {
+  .skits-grid {
+    grid-template-columns: 1fr;
+  }
+  .skits-hero {
+    flex-wrap: wrap;
+  }
+}
